@@ -8,23 +8,17 @@ import android.content.Intent
 import android.widget.RemoteViews
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
-import java.util.Timer
-import java.util.TimerTask
 
 /**
  * تنفيذ الـ App Widget لعرض الوقت المتبقي للصلاة القادمة واسمها.
  */
 class AdhanAppWidgetProvider : AppWidgetProvider() {
 
-    private val prayerTimesManager by lazy { PrayerTimesManager(context) }
-    private lateinit var context: Context
-
     override fun onUpdate(
         context: Context,
         appWidgetManager: AppWidgetManager,
         appWidgetIds: IntArray
     ) {
-        this.context = context
         // هناك عدة ويدجت، قم بتحديثها جميعًا
         for (appWidgetId in appWidgetIds) {
             updateAppWidget(context, appWidgetManager, appWidgetId)
@@ -45,6 +39,7 @@ class AdhanAppWidgetProvider : AppWidgetProvider() {
         appWidgetId: Int
     ) {
         val views = RemoteViews(context.packageName, R.layout.adhan_app_widget)
+        val prayerTimesManager = PrayerTimesManager(context)
 
         // الحصول على الصلاة القادمة والوقت المتبقي
         val nextPrayer = prayerTimesManager.getNextPrayer(LocalTime.now())
