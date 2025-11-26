@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">مؤذّن الحويجة</string>
+    <string name="notification_channel_id">adhan_channel</string>
+    <string name="notification_channel_name">إشعارات الأذان</string>
+    <string name="notification_title">مؤذّن الحويجة يعمل</string>
+    <string name="notification_text">الاستعداد للصلاة القادمة</string>
+    <string name="stop_adhan">إيقاف الأذان</string>
+    <string name="adhan_sound_1">الصوت الأول</string>
+    <string name="adhan_sound_2">الصوت الثاني</string>
+    <string name="adhan_sound_3">الصوت الثالث</string>
+    <string name="fajr_adhan_toggle">تفعيل/تعطيل أذان الفجر</string>
+    <string name="volume_control">التحكم بدرجة الصوت</string>
+    <string name="night_mode">الوضع الليلي</string>
+    <string name="notification_settings">التحكم بالإشعارات</string>
+    <string name="battery_settings">إعدادات البطارية</string>
+    <string name="copyright">© 2025 – جميع الحقوق محفوظة\nعبدالرحمن الجميلي</string>
+</resources>
